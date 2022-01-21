@@ -4,6 +4,6 @@ from django.shortcuts import redirect, render
 
 def snippet(request):
     if request.user.is_authenticated():
-        return render(request, 'snippet/snippet.html')
+        return render(request, 'snippet/snippet.html', {'title' : 'Snippet'})
     else:
         return redirect('login-page')

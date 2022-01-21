@@ -13,7 +13,7 @@ def register(request):
         print(client_username, client_password, client_email)
         return redirect('home-page')
    
-    return render(request, 'register/register.html')
+    return render(request, 'register/register.html', {'title' : 'Register'})
 
 
 

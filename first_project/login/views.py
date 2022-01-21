@@ -19,4 +19,4 @@ def login(request):
 
 
 
-    return render(request, 'login/login.html')
+    return render(request, 'login/login.html', {'title' : 'Login'})
