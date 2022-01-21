@@ -1,0 +1,35 @@
+{% extends "home/base.html" %}
+
+{% block content %}
+<div class="container">
+	<div class="row mt-5">
+		<div class="col-8 offset-2">
+			<div class="card border-primary">
+				<form method="post">
+					{% csrf_token %}
+				<div class="card-header border-primary">Register</div>
+				<div class="card-body ">
+				<label for='username'> 
+					username
+				</label>
+				<input type="text" name="username" class="form-control shadow-none border-primary mt-1 mb-1">
+				<label for='password'>
+					password
+				</label>
+				<input type="password" name="password" class='form-control shadow-none border-primary mt-1 mb-1'>
+				<label for='email'>
+					email
+				</label>
+				<input type="email" name="email" class='form-control shadow-none border-primary mt-1 mb-1'>
+			
+				</div>
+				<div class="card-footer ">
+					<input type="submit" value='Submit' class="btn btn-outline-primary border-primary mb-3 mt-3">
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}
